@@ -1,0 +1,14 @@
+name: UseFile
+on: push
+
+jobs:
+  sample:
+    runs-on: macos-10.15
+    steps:
+
+      # リポジトリからファイルを取得するアクションを利用
+      - uses: actions/checkout@v1
+
+      # Hello, World! を表示する
+      - name: Sample
+        run: bash ./print_hello.sh
