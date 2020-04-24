@@ -13,6 +13,8 @@ jobs:
         run: |
           touch sample.txt
           echo "Sample" >> sample.txt
+          brew install imagemagick
+          convert -size 100x100 xc:red ./sample.png
 
       # 成果物をGitHub上にアップロードするアクションを利用
       - name: Upload TXT
@@ -25,4 +27,4 @@ jobs:
           name: sample
 
           # アップロードするファイル or ディレクトリ名
-          path: ./sample.txt
+          path: ./sample.png
